@@ -6,7 +6,7 @@ def addFont(image, text, pos):
     font = ImageFont.truetype('/Library/Fonts/华文细黑.ttf',50)
     draw = ImageDraw.Draw(image)
     draw.text( pos, text, (255,0,0),font=font)
-    #draw.text((0,60),unicode('你好','utf-8'),(0,0,0),font=font) 
+    #draw.text((0,60),unicode('你好','utf-8'),(0,0,0),font=font)
     return image
 
 
