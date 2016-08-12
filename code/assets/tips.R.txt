@@ -16,4 +16,10 @@ Use Tracer Bullets to Find the Target
 Prototype to Learn
 Problem Close to the Problem remain
 
-
+DRY - Don’t Repeat Yourself
+Make It Easy to Reuse
+Eliminate Effects between Unrelated Things
+There Are No Final Decisions
+Use Tracer Bullets to Find the Target
+Prototype to Learn
+Problem Close to the Problem remain

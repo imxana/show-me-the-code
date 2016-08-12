@@ -31,15 +31,12 @@ def maxWord(filepath):
 if __name__ == '__main__':
     # 指明被遍历的文件夹
     rootdir =os.path.abspath(os.curdir)+'/assets/'
-    i=0
     for parent,dirnames,filenames in os.walk(rootdir):
         for filename in filenames:
             if legalname(filename):
                 infile = os.path.join(parent,filename)
                 m = maxWord(infile)
-                print(filename, '%d_times_appeared: %s'%m)
+                print(' ', filename, '\t%d times appeared: %s'%m)
                 # im = Image.open(infile)   ### 此处Image.open(dir)为多数对象应用的基础.
                 # im.thumbnail(size)  ### 此处size 为长度为2的tuple类型，改变图片分辨率
                 # im.save(infile) ### im.save(dir)，图片处理的最后都用这个，就是保存处理过后的图片
-                i+=1
-                print(i, "Done")
