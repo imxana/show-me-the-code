@@ -27,5 +27,5 @@ dist
 __pycache__/
 
 # download files
-download/*
-!download/
+/download/*
+!/download/
