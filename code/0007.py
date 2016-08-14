@@ -13,13 +13,21 @@ def legalname(filename):
             return True
     return False
 
+def isNote(line):
+    mark = ['//', '#', '\'\'\'', '\"\"\"']
+    flag = False
+    for m in mark:
+        if line.startswith(m):
+            return True
+    return False
+
 def lineCount(lines):
     code, note, blank = 0,0,0
     for line in lines:
         line = line.strip()
         if line == '':
             blank += 1
-        elif line.startswith('//') or line.startswith('#'):
+        elif isNote(line):
             note += 1
         else:
             code += 1

@@ -6,10 +6,7 @@ Be a Catalyst for Change
 Remember the Big Picture
 Make Quality a Requirements Issue
 Invest Regularly in Your Knowledge Portfolio
-Critically Analyze What You Read and Hear
-It’s both What You Say and the Way You Say It
-DRY - Don’t Repeat Yourself
-Make It Easy to Reuse
+
 Eliminate Effects between Unrelated Things
 There Are No Final Decisions
 Use Tracer Bullets to Find the Target

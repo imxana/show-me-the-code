@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-# 第 0008 题：一个HTML文件，找出里面的正文。
-# 第 0009 题：一个HTML文件，找出里面的链接。
-# 第 0010 题：使用 Python 生成类似于下图中的字母验证码图片
 
-import re
+'''第 0008 题：一个HTML文件，找出里面的正文。'''
 
-def count(filepath):
-    f = open(filepath, 'rU')
-    s = f.read()
-    words = re.findall(r'[a-zA-Z0-9-]+', s)
-    return len(words)
+import urllib.request
+from bs4 import BeautifulSoup
+
+def findBody(url):
+    page = urllib.request.urlopen(url)
+    soup = BeautifulSoup(page, "html.parser")
+    return soup.body
 
 if __name__ == '__main__':
-    num = count('assets/tips.txt')
-    print (num)
+    body = findBody("https://www.baidu.com")
+    print(body)

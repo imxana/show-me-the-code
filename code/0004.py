@@ -4,11 +4,19 @@
 import re
 
 def count(filepath):
-    f = open(filepath, 'rU')
-    s = f.read()
-    words = re.findall(r'[a-zA-Z0-9-]+', s)
-    return len(words)
+    dic = dict()
+    text = open(filepath, 'rU').read()
+    words = re.findall(r'[a-zA-Z0-9-’\']+', text)
+    for word in words:
+        word = word.lower()
+        if dic.get(word, 0) == 0:
+            dic[word] = 0
+        dic[word] += 1
+    return dic
 
 if __name__ == '__main__':
     num = count('assets/tips.txt')
-    print (num)
+    print('Times\tWord')
+    for key in num:
+        print (' %d\t%s'%(num[key], key))
+    print(' %d\tTotal'%len(num))
