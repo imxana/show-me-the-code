@@ -24,7 +24,8 @@ dist
 
 
 # python cache
-__pycache__/
+code/__pycache__/
 
 # download files
-download/
+code/download/*
+!code/download/.gitkeep
