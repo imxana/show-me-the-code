@@ -17,6 +17,7 @@ def create():
     rst = []
     for i in range(200):
         rst.append(randomR(30,'XANA','The','Genius'))
+        # rst['%d'%i] = randomR(30,'XANA','The','Genius')
     return rst
 
 
@@ -25,5 +26,3 @@ if __name__ == '__main__':
         print(k, v)
 else:
     pass
-
-
